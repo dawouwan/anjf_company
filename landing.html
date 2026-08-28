@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang="ko"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ANJF Technical Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<!-- Pretendard Font -->
+<link as="style" crossorigin="" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#1e6bff",
+                        "surface-container-highest": "#e0e3e6",
+                        "on-secondary-fixed-variant": "#2434b6",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb598",
+                        "tertiary": "#a43a00",
+                        "secondary-fixed": "#dfe0ff",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#d8dadd",
+                        "text-primary": "#1A1F36",
+                        "text-secondary": "#4F5B76",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary": "#3d4dcc",
+                        "inverse-on-surface": "#eff1f4",
+                        "surface-variant": "#e0e3e6",
+                        "inverse-surface": "#2d3133",
+                        "on-primary-fixed-variant": "#003fa5",
+                        "on-tertiary-fixed-variant": "#7f2b00",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#5867e7",
+                        "surface-container": "#eceef1",
+                        "secondary-fixed-dim": "#bcc2ff",
+                        "on-surface": "#191c1e",
+                        "on-secondary-fixed": "#000a63",
+                        "on-tertiary-container": "#fffeff",
+                        "surface-tint": "#0054d7",
+                        "tertiary-container": "#cd4b00",
+                        "tertiary-fixed": "#ffdbce",
+                        "on-primary-fixed": "#001849",
+                        "background": "#f7f9fc",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#424655",
+                        "on-primary-container": "#fffeff",
+                        "outline": "#737687",
+                        "on-background": "#191c1e",
+                        "brand-gradient": "linear-gradient(135deg, #1E6BFF 0%, #0A1FA8 100%)",
+                        "surface-bright": "#f7f9fc",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#370e00",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-container-low": "#f2f4f7",
+                        "inverse-primary": "#b3c5ff",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "surface": "#f7f9fc",
+                        "border-subtle": "#E4E7EB",
+                        "outline-variant": "#c2c6d8",
+                        "primary": "#0053d4",
+                        "surface-white": "#FFFFFF",
+                        "on-secondary-container": "#fffbff",
+                        "surface-container-high": "#e6e8eb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "margin-desktop": "48px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "16px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "stack-xl": "64px",
+                        "stack-2xl": "128px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Montserrat", "Pretendard", "sans-serif"],
+                        "caption": ["Inter", "Pretendard", "sans-serif"],
+                        "body-md": ["Pretendard", "sans-serif"],
+                        "headline-md": ["Montserrat", "Pretendard", "sans-serif"],
+                        "label-md": ["Inter", "Pretendard", "sans-serif"],
+                        "display-lg": ["Montserrat", "Pretendard", "sans-serif"],
+                        "body-lg": ["Pretendard", "sans-serif"],
+                        "headline-lg": ["Montserrat", "Pretendard", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "10xl": ["160px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "11xl": ["192px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #f7f9fc;
+            color: #1A1F36;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #1E6BFF 0%, #0A1FA8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-brand-gradient {
+            background: linear-gradient(135deg, #1E6BFF 0%, #0A1FA8 100%);
+        }
+        .soft-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
+        }
+        /* Slanted steps for process section mirroring logo */
+        .step-slant-1 { transform: skewX(-20deg); }
+        .step-slant-2 { transform: skewX(-20deg) translateY(-10px); }
+        .step-slant-3 { transform: skewX(-20deg) translateY(-20px); }
+        .step-slant-4 { transform: skewX(-20deg) translateY(-30px); }
+        
+        .step-content-unslant { transform: skewX(20deg); }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopNavBar (From JSON) -->
+<header class="bg-surface-white dark:bg-surface-container-lowest border-b border-border-subtle dark:border-outline-variant fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-margin-desktop h-20 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<img alt="ANJF Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBli8Mk_RzaSgrv1LGI42MHNnx4EKRZwqa2txt_YThQLn8rhmvi0LfkzAWQv4F3hd2Lf5wWhuA4kUhoN4cnT9HmiQvXctPd2KP22bjgvwZGQyxRGZe9mIdLrgtay1s6oIbpYFKrX7XHT_q8Qkl_jBMw-MEvoqYjOI24a-KKy7TFXlX9wNY3GU_KwGKV4fHqjvo12r3bENzkFwC_14i0BsMJ9yCqKoOoqvXzULHLCjwRwGv2Iz6r71MPqJyPw5bhLh3vxZ4">
+<span class="text-headline-md font-headline-md font-extrabold text-primary dark:text-primary-fixed" style="word-break: keep-all; overflow-wrap: break-word;">ANJF</span>
+</div>
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary py-2" href="#" style="word-break: keep-all; overflow-wrap: break-word;">Platform</a>
+<a class="text-text-secondary dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#" style="word-break: keep-all; overflow-wrap: break-word;">Solutions</a>
+<a class="text-text-secondary dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#" style="word-break: keep-all; overflow-wrap: break-word;">Resources</a>
+<a class="text-text-secondary dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#" style="word-break: keep-all; overflow-wrap: break-word;">Pricing</a>
+</nav>
+<div class="flex items-center">
+<button class="bg-brand-gradient text-on-primary font-label-md text-label-md px-6 h-12 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center soft-shadow" style="word-break: keep-all; overflow-wrap: break-word;">
+                    Get Started
+                </button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="bg-surface-white relative overflow-hidden py-stack-2xl">
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10 flex flex-col items-center gap-stack-xl">
+<div class="flex-1 text-center max-w-4xl">
+<h1 class="text-5xl md:text-6xl lg:text-display-xl font-extrabold text-tertiary leading-tight tracking-tight mb-stack-md" style="word-break: keep-all; overflow-wrap: break-word;">
+                        신뢰 그 이상의 가치, <br>
+<span style="word-break: keep-all; overflow-wrap: break-word;">ANJF 테크니컬 서비스</span>
+</h1>
+<p class="font-body-lg text-xl text-text-secondary mb-stack-lg max-w-2xl mx-auto text-left" style="word-break: keep-all; overflow-wrap: break-word;">
+                        글로벌 스탠다드에 부합하는 정밀한 검증과 실시간 모니터링을 통해<br>
+                        기업의 기술적 완성도를 높이고, 시장에서의 확실한 경쟁력을 확보하세요.
+                    </p>
+<div class="flex flex-col sm:flex-row items-center gap-stack-md justify-center">
+<button class="bg-brand-gradient text-on-primary font-label-md text-label-md px-8 h-12 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center soft-shadow w-full sm:w-auto" style="word-break: keep-all; overflow-wrap: break-word;">
+                            솔루션 도입 문의
+                        </button>
+<button class="bg-transparent border border-border-subtle text-text-primary font-label-md text-label-md px-8 h-12 rounded-lg hover:bg-surface-container-low transition-colors flex items-center justify-center w-full sm:w-auto" style="word-break: keep-all; overflow-wrap: break-word;">
+                            데모 시연 예약
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="bg-surface-container-lowest border-y border-border-subtle py-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<p class="font-label-md text-label-md text-text-secondary uppercase tracking-widest mb-stack-md" style="word-break: keep-all; overflow-wrap: break-word;">전 세계 5,000+ 기업이 신뢰하는 인증 솔루션</p>
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale">
+<span class="font-headline-md text-headline-md font-bold" style="word-break: keep-all; overflow-wrap: break-word;">TechCorp</span>
+<span class="font-headline-md text-headline-md font-bold" style="word-break: keep-all; overflow-wrap: break-word;">InnovaNet</span>
+<span class="font-headline-md text-headline-md font-bold" style="word-break: keep-all; overflow-wrap: break-word;">GlobalSys</span>
+<span class="font-headline-md text-headline-md font-bold" style="word-break: keep-all; overflow-wrap: break-word;">DataFlow</span>
+<span class="font-headline-md text-headline-md font-bold" style="word-break: keep-all; overflow-wrap: break-word;">SecureGrid</span>
+</div>
+</div>
+</section>
+<!-- Features Section (Bento Grid) -->
+<section class="bg-surface-container-low py-stack-2xl">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-stack-xl">
+<h2 class="font-headline-lg text-headline-lg text-text-primary mb-stack-sm" style="word-break: keep-all; overflow-wrap: break-word;">압도적인 기술력의 차이</h2>
+<p class="font-body-md text-body-md text-text-secondary" style="word-break: keep-all; overflow-wrap: break-word;">비즈니스 환경에 최적화된 엔터프라이즈급 기능을 제공합니다.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Feature 1 -->
+<div class="bg-surface-white rounded-xl p-stack-lg border border-border-subtle soft-shadow hover-lift transition-all duration-300 flex flex-col items-start">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center mb-stack-md">
+<span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-stack-sm" style="word-break: keep-all; overflow-wrap: break-word;">정밀한 검증</h3>
+<p class="font-body-md text-body-md text-text-secondary" style="word-break: keep-all; overflow-wrap: break-word;">AI 기반의 다차원 분석 알고리즘을 통해 시스템 취약점을 사전에 발견하고 완벽하게 차단합니다.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-white rounded-xl p-stack-lg border border-border-subtle soft-shadow hover-lift transition-all duration-300 flex flex-col items-start">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center mb-stack-md">
+<span class="material-symbols-outlined text-primary text-[24px]">monitoring</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-stack-sm" style="word-break: keep-all; overflow-wrap: break-word;">실시간 모니터링</h3>
+<p class="font-body-md text-body-md text-text-secondary" style="word-break: keep-all; overflow-wrap: break-word;">24/7 중단 없는 트래픽 분석 및 대시보드를 제공하여 즉각적인 의사결정을 지원합니다.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-white rounded-xl p-stack-lg border border-border-subtle soft-shadow hover-lift transition-all duration-300 flex flex-col items-start">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center mb-stack-md">
+<span class="material-symbols-outlined text-primary text-[24px]">public</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-stack-sm" style="word-break: keep-all; overflow-wrap: break-word;">글로벌 표준 준수</h3>
+<p class="font-body-md text-body-md text-text-secondary" style="word-break: keep-all; overflow-wrap: break-word;">ISO 27001, SOC 2 등 최고 수준의 국제 보안 규격을 철저히 준수하여 글로벌 비즈니스 확장을 돕습니다.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="bg-surface-white py-stack-2xl overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-stack-xl">
+<h2 class="font-headline-lg text-headline-lg text-text-primary mb-stack-sm" style="word-break: keep-all; overflow-wrap: break-word;">성공을 위한 4단계 프로세스</h2>
+<p class="font-body-md text-body-md text-text-secondary" style="word-break: keep-all; overflow-wrap: break-word;">체계적이고 검증된 방법론으로 완벽한 결과를 도출합니다.</p>
+</div>
+<!-- Abstract representation of the 4 strokes in the logo -->
+<div class="flex flex-col gap-10 mt-16 max-w-4xl mx-auto">
+<!-- Step 1 -->
+<div class="flex items-center gap-8 group">
+    <div class="step-slant-1 bg-surface-container-high hover:bg-[#FF003F] w-64 h-48 rounded-2xl p-4 transition-colors duration-300 relative overflow-hidden soft-shadow flex-shrink-0">
+        <div class="step-content-unslant h-full flex flex-col justify-center items-center group-hover:text-surface-white text-text-primary">
+            <span class="font-display-lg text-[64px] group-hover:text-[24px] opacity-20 group-hover:opacity-0 group-hover:h-0 leading-none transition-all duration-300" style="word-break: keep-all;">01</span>
+            <h4 class="font-headline-lg text-3xl group-hover:text-5xl font-bold mt-1 group-hover:mt-0 transition-all duration-300" style="word-break: keep-all;">분석</h4>
+        </div>
+    </div>
+    <div class="flex-grow flex items-center justify-center text-center">
+        <p class="font-body-lg text-3xl text-text-secondary group-hover:text-text-primary transition-colors" style="word-break: keep-all;">현재 인프라의 상태와 요구사항을 정밀 진단</p>
+    </div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-center gap-8 group">
+    <div class="step-slant-2 bg-surface-container-high hover:bg-[#FF003F] w-64 h-48 rounded-2xl p-4 transition-colors duration-300 relative overflow-hidden soft-shadow flex-shrink-0">
+        <div class="step-content-unslant h-full flex flex-col justify-center items-center group-hover:text-surface-white text-text-primary">
+            <span class="font-display-lg text-[64px] group-hover:text-[24px] opacity-20 group-hover:opacity-0 group-hover:h-0 leading-none transition-all duration-300" style="word-break: keep-all;">02</span>
+            <h4 class="font-headline-lg text-3xl group-hover:text-5xl font-bold mt-1 group-hover:mt-0 transition-all duration-300" style="word-break: keep-all;">설계</h4>
+        </div>
+    </div>
+    <div class="flex-grow flex items-center justify-center text-center">
+        <p class="font-body-lg text-3xl text-text-secondary group-hover:text-text-primary transition-colors" style="word-break: keep-all;">최적의 아키텍처 및 보안 정책 수립</p>
+    </div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-center gap-8 group">
+    <div class="step-slant-3 bg-surface-container-high hover:bg-[#FF003F] w-64 h-48 rounded-2xl p-4 transition-colors duration-300 relative overflow-hidden soft-shadow flex-shrink-0">
+        <div class="step-content-unslant h-full flex flex-col justify-center items-center group-hover:text-surface-white text-text-primary">
+            <span class="font-display-lg text-[64px] group-hover:text-[24px] opacity-20 group-hover:opacity-0 group-hover:h-0 leading-none transition-all duration-300" style="word-break: keep-all;">03</span>
+            <h4 class="font-headline-lg text-3xl group-hover:text-5xl font-bold mt-1 group-hover:mt-0 transition-all duration-300" style="word-break: keep-all;">구축</h4>
+        </div>
+    </div>
+    <div class="flex-grow flex items-center justify-center text-center">
+        <p class="font-body-lg text-3xl text-text-secondary group-hover:text-text-primary transition-colors" style="word-break: keep-all;">무중단 마이그레이션 및 시스템 적용</p>
+    </div>
+</div>
+<!-- Step 4 -->
+<div class="flex items-center gap-8 group">
+    <div class="step-slant-4 bg-surface-container-high hover:bg-[#FF003F] w-64 h-48 rounded-2xl p-4 transition-colors duration-300 relative overflow-hidden soft-shadow flex-shrink-0">
+        <div class="step-content-unslant h-full flex flex-col justify-center items-center group-hover:text-surface-white text-text-primary">
+            <span class="font-display-lg text-[64px] group-hover:text-[24px] opacity-20 group-hover:opacity-0 group-hover:h-0 leading-none transition-all duration-300" style="word-break: keep-all;">04</span>
+            <h4 class="font-headline-lg text-3xl group-hover:text-5xl font-bold mt-1 group-hover:mt-0 transition-all duration-300" style="word-break: keep-all;">운영</h4>
+        </div>
+    </div>
+    <div class="flex-grow flex items-center justify-center text-center">
+        <p class="font-body-lg text-3xl text-text-secondary group-hover:text-text-primary transition-colors" style="word-break: keep-all;">지속적인 모니터링 및 기술 지원</p>
+    </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Video Section -->
+<section class="bg-surface-container-low py-stack-2xl">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-stack-xl">
+<h2 class="font-headline-lg text-headline-lg text-text-primary mb-stack-sm" style="word-break: keep-all; overflow-wrap: break-word;">ANJF를 영상으로 만나보세요</h2>
+<p class="font-body-md text-body-md text-text-secondary" style="word-break: keep-all; overflow-wrap: break-word;">서비스 소개 영상을 통해 ANJF의 기술력을 확인하세요.</p>
+</div>
+<div class="max-w-4xl mx-auto rounded-2xl overflow-hidden soft-shadow bg-black">
+<video class="w-full h-auto" controls="" playsinline="" poster="" preload="metadata">
+<source src="ANJF_video.mp4" type="video/mp4">
+                    브라우저가 video 태그를 지원하지 않습니다.
+                </video>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (From JSON) -->
+<footer class="bg-on-secondary-fixed dark:bg-inverse-surface w-full py-stack-lg px-margin-desktop">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="flex items-center gap-4">
+<img alt="ANJF Logo" class="h-8 w-auto grayscale brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCJEQFBftIzU9sbelUpaGpmTElkUGgvhwF4hd63dBNu2rvZk45VdNl89syF8fVVXqpx1zup0Z_t8Nv3w9jSb2r1D_fpwTkfi6GVq4ae7Z-yLRfj9la_M_jcNDceUcb366HTAkbKTK2ybgauB8ibR9njEYgvdwJPiGI-PR_Dt5F7TG0J0pqXBSo6MjpXA0FHXFSG8uwENCJkex8S7VKzT2kwcTdCkNtqmvfVX5AlatWWnwrd4lbszKVuhPt3GNkZLJciMU">
+<span class="text-headline-md font-headline-md font-bold text-surface-white" style="word-break: keep-all; overflow-wrap: break-word;">ANJF</span>
+</div>
+<div class="flex gap-gutter font-caption text-caption text-surface-variant/60 dark:text-surface-variant/80">
+<a class="hover:text-surface-white transition-colors" href="#" style="word-break: keep-all; overflow-wrap: break-word;">Privacy Policy</a>
+<a class="hover:text-surface-white transition-colors" href="#" style="word-break: keep-all; overflow-wrap: break-word;">Terms of Service</a>
+<a class="hover:text-surface-white transition-colors" href="#" style="word-break: keep-all; overflow-wrap: break-word;">Security</a>
+<a class="hover:text-surface-white transition-colors" href="#" style="word-break: keep-all; overflow-wrap: break-word;">Contact</a>
+</div>
+<div class="font-caption text-caption text-surface-variant/60 dark:text-surface-variant/80">
+                © 2024 ANJF Technical Services. All rights reserved.
+            </div>
+</div>
+</footer>
+
+
+
+
+</body></html>
